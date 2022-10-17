@@ -1,0 +1,54 @@
+h3 {
+    background-color: antiquewhite;
+    text-align:center;
+    font-weight: bold;
+}
+
+.card {
+    transition: 0.3s ease-in-out;
+}
+
+.card:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+
+}
+
+img{
+    padding-top: 2px;
+    padding-bottom: 10px;
+    transition: all 0.4s ease-in-out;
+    
+}
+
+img:hover {
+    transform: scale(1.1, 1.1);
+    transition: all 0.4s ease;
+    
+
+}
+
+.member-icons {
+    position:absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: -1;
+    /* transition: all 0.5s ease; */
+}
+
+img:hover .member-icons{
+    position:absolute;
+    /* transition: all 0.5s ease; */
+    top: 50%;
+    right: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 100;
+    
+}

@@ -1,9 +1,19 @@
 <div class="card shadow-lg p-3 m-2">
     <h3>{{Property.Name}}</h3>
     <img src="{{Property.Image}}" alt="Property Image" class="img-thumbnail-sm" />
-    <p>Type: {{Property.Type}}</p>
-    <p>Address: {{Property.Address}}</p>
-    <p>Bedrooms: {{Property.Bedrooms}}</p>
-    <p>Bathrooms: {{Property.Bathrooms}}</p>
-    <p>Price: ${{Property.Price}}</p>
+    <div >
+        <ul class="list-inline text-center member-icons">
+            <li class="list-inline-item">
+                <button class="btn btn-primary btn-sm">View</button>
+            </li>
+            <li class="list-inline-item">
+                <button class="btn btn-primary btn-sm">Call</button>
+            </li>
+        </ul>
+    </div>
+    <p><strong>Type: </strong>{{Property.Type}}</p>
+    <p><strong>Address: </strong>{{Property.Address}}</p>
+    <p><strong>Bedrooms: </strong>{{Property.Bedrooms}}</p>
+    <p><strong>Bathrooms: </strong>{{Property.Bathrooms}}</p>
+    <p><strong>Price: </strong>${{Property.Price}}</p>
 </div>

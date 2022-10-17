@@ -37,6 +37,16 @@ export class PropertyListComponent implements OnInit {
       "Bathrooms": 2,
       "Price": 120000
     },
+    {
+      "Id": 4,
+      "Name": "House 4",
+      "Image": "assets/default-house.jpg",
+      "Type": "House",
+      "Address": "Sample Address",
+      "Bedrooms": 5,
+      "Bathrooms": 6,
+      "Price": 460000
+    },
 
   ]
   
