@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HousingService } from '../../services/housing.service';
 import { IProperty } from '../IProperty.interface';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-property-list',
@@ -10,16 +11,31 @@ import { IProperty } from '../IProperty.interface';
 export class PropertyListComponent implements OnInit {
   
   //need to change housing.service to return an array of properties
-  //Properties: Array<IProperty> = [];
+  //Properties: IProperty[];
   // Vid 11
   Properties: any = [];
 
-  constructor(private housingService: HousingService) { }
+  ForRent = false;
+
+  constructor(private route: ActivatedRoute, private housingService: HousingService) { }
 
   ngOnInit(): void {
-    this.housingService.getAllProperties().subscribe(
+    //Seperate into buy and rent
+    if(this.route.snapshot.url.toString() == 'rent-property'){
+      
+            
+
+      this.ForRent = true;
+    }
+    //only get properties that are for rent
+    this.housingService.getAllProperties(this.ForRent).subscribe(
+  
+
+
+    //this.housingService.getAllProperties().subscribe(
       data => {
         this.Properties = data;
+        
       }, error => {
         console.log('httperror:');
         console.log(error);

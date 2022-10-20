@@ -72,7 +72,7 @@
     {
       "Id": 8,
       "Name": "Apartment 4",
-      "Image": "assets/default-house.jpg",
+      "Image": null,
       "Type": "Rental",
       "Address": "Sample Address",
       "Bedrooms": 5,

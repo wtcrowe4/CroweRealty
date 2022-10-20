@@ -1,8 +1,9 @@
 <div class="card shadow-lg p-3 m-2">
     <h3>{{Property.Name}}</h3>
     <div class="card-img-container">
-        <img src="{{Property.Image}}" alt="Property Image" class="img-thumbnail-sm" />
-        <div >
+        <img *ngIf="Property.Image" src="{{Property.Image}}" alt="Property Image" class="img-thumbnail-sm" />
+        <img *ngIf="!Property.Image" src="assets/default-house.jpg" alt="Property Image" class="img-thumbnail-sm" />
+        <div>
             <ul class="list-inline text-center member-icons">
                 <li class="list-inline-item">
                     <button class="btn btn-primary btn-sm bg-dark" routerLink="/property-detail/{{Property.Id}}">View</button>

@@ -10,7 +10,7 @@ export class HousingService {
 
   constructor(private http:HttpClient) { }
 
-  getAllProperties(){
+  getAllProperties(ForRent: boolean){
     //return this.http.get('data/properties.json')
     
     
@@ -21,9 +21,9 @@ export class HousingService {
     );
 
     //data is returning an object, not an array
-    // .pipe(
+    // return this.http.get('data/properties.json').pipe(
     //   map(data => {
-    //     const propertiesArray: Array<IProperty> = [];
+    //     const propertiesArray!: Array<IProperty> = [];
     //     for(const Id in data){
     //       if(data.hasOwnProperty(Id)){
     //         propertiesArray.push(data[Id]);
