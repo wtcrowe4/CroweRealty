@@ -7,13 +7,13 @@
         
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="/"><span class="sr-only">*</span>Shop</a>
+                <a class="nav-link" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" routerLink="/">Buy</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/">Sell</a>
+                <a class="nav-link" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" routerLink="/rent-property">Rent</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/add-property">List Property</a>
+                <a class="nav-link" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" routerLink="/add-property">List Property</a>
             </li>
         </ul>
     </div>
