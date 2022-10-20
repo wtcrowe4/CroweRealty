@@ -22,10 +22,9 @@ export class PropertyListComponent implements OnInit {
   ngOnInit(): void {
     //Seperate into buy and rent
     if(this.route.snapshot.url.toString() == 'rent-property'){
-      
-            
-
       this.ForRent = true;
+      
+
     }
     //only get properties that are for rent
     this.housingService.getAllProperties(this.ForRent).subscribe(
@@ -34,6 +33,7 @@ export class PropertyListComponent implements OnInit {
 
     //this.housingService.getAllProperties().subscribe(
       data => {
+        console.log(this.route.snapshot.url.toString());
         this.Properties = data;
         
       }, error => {

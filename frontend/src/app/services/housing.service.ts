@@ -13,20 +13,37 @@ export class HousingService {
   getAllProperties(ForRent: boolean){
     //return this.http.get('data/properties.json')
     
-    
+    //make return type an array of properties
+
+
     return this.http.get('data/properties.json').pipe(
-     map(data => {
-       return data;
+      map(data => {
+      console.log(data);
+      return data;
       })
     );
+      
+      // vid 14
+      // if (ForRent == true){
+         
+        //only return properties that are for rent
+    //       const propertiesArray: Array<IProperty> = [];
+    //       for(const id in data){
+    //         if(data.hasOwnProperty(id) && data[id].Type === 'Rental'){
+    //           propertiesArray.push(data[id]);
+    //         }
+    //       }
+    //       return propertiesArray;
+      
+    // );
 
     //data is returning an object, not an array
     // return this.http.get('data/properties.json').pipe(
     //   map(data => {
     //     const propertiesArray!: Array<IProperty> = [];
-    //     for(const Id in data){
-    //       if(data.hasOwnProperty(Id)){
-    //         propertiesArray.push(data[Id]);
+    //     for(const id in data){
+    //       if(data.hasOwnProperty(Id) && data[id].Type !== 'Rental'){
+    //         propertiesArray.push(data[id]);
     //       }
     //     }
     //     return propertiesArray;
